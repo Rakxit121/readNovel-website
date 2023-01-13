@@ -1,7 +1,7 @@
-<div th:fragment="footer" class="row">
+<!-- <div th:fragment="footer" class="row">
     <footer>
         <div class="information">
-<!--            <img th:src="@{~/images/ServicesImages/logo.png}" alt="">-->
+           <img th:src="@{~/images/ServicesImages/logo.png}" alt="">
             <h3>ReadNovel</h3>
             <p> <a href="">readnovel@gmail.com</a> </p>
         </div>
@@ -22,9 +22,32 @@
             <h3>Email us Your Queries</h3>
             <div class="email">
                 <input type="email" name="" id="" placeholder="  Enter your email">
-                <!-- <input type="submit" name="" id=""> -->
+                <input type="submit" name="" id="">
                 <button><a href="">Send</a></button>
             </div>
         </div>
     </footer>
-</div>
+</div> -->
+
+
+<footer th:fragment="footer">
+    <hr>
+    <div class="footer-content">
+      <div class="left-section">
+        <a th:href="@{/home}" th:text="#{home}">Home</a>
+        <a th:href="@{/contactus}" th:text="#{contactus}">Contact Us</a>
+      </div>
+      <div class="center-section">
+        <img th:src="@{/img/logo.png}" class="logo" alt="Logo">
+      </div>
+      <div class="right-section">
+        <a th:href="@{https://discord.com/}" target="_blank">
+          <i class="fab fa-discord"></i>
+        </a>
+        <a th:href="@{https://facebook.com/}" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  

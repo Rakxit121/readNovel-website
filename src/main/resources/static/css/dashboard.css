@@ -1,23 +1,31 @@
-.wf-force-outline-none[tabindex="-1"]:focus{outline:none;}
+.wf-force-outline-none[tabindex="-1"]:focus {
+    outline: none;
+}
 
 @keyframes caretBlink {
-    from { opacity: 1.0; }
-    to { opacity: 0.0; }
+    from {
+        opacity: 1.0;
+    }
+
+    to {
+        opacity: 0.0;
+    }
 }
 
 @keyframes rotateSpinner {
     from {
-        transform:rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-        transform:rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 #text-tool-caret {
     animation-name: caretBlink;
     animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
     animation-duration: 1s;
 }
 
@@ -39,15 +47,15 @@
     animation-timing-function: linear;
 }
 
-                              .skitchToastBoxContainer {
-                                  position: absolute;
-                                  width: 100%;
-                                  text-align: center;
-                                  top: 30px;
-                                  -webkit-user-select: none;
-                                  -moz-user-select: none;
-                                  pointer-events: none;
-                              }
+.skitchToastBoxContainer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    pointer-events: none;
+}
 
 .skitchToastBox {
     width: 200px;
@@ -65,14 +73,14 @@
 
 .lang-zh-cn .skitchToastBox {
     font-family: '微软雅黑', 'Microsoft YaHei', SimSun,
-    '&#x30E1;&#x30A4;&#x30EA;&#x30AA;', Meiryo, 'MS PGothic', 'Soleil',
-    Helvetica, Arial, sans-serif;
+        '&#x30E1;&#x30A4;&#x30EA;&#x30AA;', Meiryo, 'MS PGothic', 'Soleil',
+        Helvetica, Arial, sans-serif;
 }
 
 .lang-ja-jp .skitchToastBox {
     font-family: '&#x30E1;&#x30A4;&#x30EA;&#x30AA;', Meiryo, 'MS PGothic',
-    '微软雅黑', 'Microsoft YaHei', SimSun, 'Soleil', Helvetica, Arial,
-    sans-serif;
+        '微软雅黑', 'Microsoft YaHei', SimSun, 'Soleil', Helvetica, Arial,
+        sans-serif;
 }
 
 .skitchToast {
@@ -95,16 +103,17 @@
     font-weight: normal;
     font-style: normal;
 }
-          #en-markup-disabled {
-                                  position: fixed;
-                                  z-index: 9999;
-                                  width: 100%;
-                                  height: 100%;
-                                  top: 0px;
-                                  left: 0px;
-                                  cursor: default;
-                                  -webkit-user-select: none;
-                              }
+
+#en-markup-disabled {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    cursor: default;
+    -webkit-user-select: none;
+}
 
 #en-markup-alert-container {
     position: absolute;
@@ -113,7 +122,7 @@
     left: calc(50% - 225px);
     top: calc(50% - 85px);
     background-color: white;
-    box-shadow: 0 2px 7px 1px rgba(0,0,0,0.35);
+    box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.35);
     -webkit-user-select: none;
 }
 
@@ -154,7 +163,7 @@
     width: 450px;
     height: 60px;
     float: left;
-    background-color: rgb(240,240,240);
+    background-color: rgb(240, 240, 240);
 }
 
 #en-markup-alert-container .cell-3 button {
@@ -172,6 +181,7 @@
     width: 110px;
     height: 36px;
 }
+
 /*/*/
 
 
@@ -1238,6 +1248,7 @@ figcaption {
 .footer-bottom.dark-bg {
     border-top-color: hsla(0, 0%, 100%, 0.2);
 }
+
 /* random text to  find the cpoy-paste */
 
 
@@ -4881,7 +4892,11 @@ figcaption {
 }
 
 /**/
-.review-top-line, .hero-bg-gradient, .button, .section.bg-gradient, .footer-logo {
+.review-top-line,
+.hero-bg-gradient,
+.button,
+.section.bg-gradient,
+.footer-logo {
     background-image: -webkit-gradient(linear, left top, right top, from(#6a4ee1), to(#b87df9));
     background-image: linear-gradient(90deg, #6a4ee1, #b87df9);
 }

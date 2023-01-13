@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 16px;
+    }
+    
+    header a:hover {
+    color: #ddd;
+    }
+    
+    .search-form {
+    display: flex;
+    align-items: center;
+    }
+    
+    .search-form input {
+    border: none;
+    padding: 8px;
+    margin-right: 8px;
+    }
+    
+    .search-form button {
+    background-color: #c03cff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    }
+    
+    main {
+    padding: 16px;
+    }
+    
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+    
+    .novel-list {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    
+    .novel {
+    width: 25%;
+    margin: 16px;
+    text-align: center;
+    }
+    
+    .novel img {
+    width: 100%;
+    }
+    
+    .novel h2 {
+    margin: 8px 0;
+    }
+    
+    .novel p {
+    margin: 8px 0;
+    }
+    
+    .read-button {
+    background-color: #6d00dc;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    }
+    
+    footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    }
+    
+    .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    
+    .left-section, .center-section, .right-section {
+    width: 33%;
+    }
+    
+    .logo {
+    width: 50px;
+    height: 50px;
+    }
+    
+    .right-section a {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 8px;
+    }
+  

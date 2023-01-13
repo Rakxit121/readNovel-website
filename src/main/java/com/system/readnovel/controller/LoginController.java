@@ -10,6 +10,6 @@ public class LoginController {
 
     @GetMapping("/homepage")
     public  String getPage(){
-        return "landingpage.html";
+        return "mainpage";
     }
 }
