@@ -16,7 +16,7 @@ public class User {
     @Column(nullable = false)
     private String email;
 
-    @Column(name = "mobile_no")
-    private String mobileNo;
+    @Column(name = "username")
+    private String username;
 
 }

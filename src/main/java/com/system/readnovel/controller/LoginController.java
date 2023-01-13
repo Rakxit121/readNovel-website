@@ -10,6 +10,16 @@ public class LoginController {
 
     @GetMapping("/homepage")
     public  String getPage(){
-        return "mainpage";
+        return "landingpage";
     }
+
+    @GetMapping("/login")
+    public String getLogin(){
+        return "login";
+    }
+    @GetMapping("/register")
+    public String getRegister(){
+        return "register_user";
+    }
+
 }

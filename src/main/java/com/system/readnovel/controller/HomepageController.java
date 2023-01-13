@@ -21,6 +21,11 @@ public class HomepageController {
         return "mainpage";
     }
 
+    @GetMapping("/register")
+    public  String getRegister(){
+        return "register_user";
+    }
+
 //    @Autowired
 //    private NovelService novelService;
 //
