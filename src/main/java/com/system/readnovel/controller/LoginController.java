@@ -22,4 +22,9 @@ public class LoginController {
         return "register_user";
     }
 
+    @GetMapping("/admin-dashboard")
+    public String getAdminDashboard(){
+        return "Dashboard";
+    }
+
 }
