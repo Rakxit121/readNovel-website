@@ -2,32 +2,33 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
-        <link rel="stylesheet" th:href="@{css/footer.css}">
-        <link rel="stylesheet" th:href="@{css/header.css}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <title>ReadNovel Home</title>
+        <link rel="stylesheet" th:href="@{~/css/footer.css}">
+        <link rel="stylesheet" th:href="@{~/css/header.css}">
+        <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css}">
 
     </head>
     <body>
 
-        <header th:replace="fragments/header :: header"></header>
+        <header th:replace="fragment/header_frag.html :: header"></header>
 
         <main>
             <div class="container">
-              <h1 th:text="#{latestReleases}">Latest Releases</h1>
+              <h1 >Latest Releases</h1>
+<!--              <h1 th:text="#{latestReleases}">Latest Releases</h1>-->
               <div class="novel-list">
-                <div class="novel" th:each="novel : ${latestNovels}">
-                  <img th:src="@{/img/novels/} + ${novel.coverImage}" alt="Novel Cover">
-                  <h2 th:text="${novel.title}">Novel Title</h2>
-                  <p th:text="${novel.author}">Author</p>
-                  <a th:href="@{/novel/} + ${novel.id}" th:text="#{read}" class="read-button">Read</a>
+<!--                <div class="novel" th:each="novel : ${latestNovels}">-->
+<!--                  <img th:src="@{/img/novels/} + ${novel.coverImage}" alt="Novel Cover">-->
+<!--                  <h2 th:text="${novel.title}">Novel Title</h2>-->
+<!--                  <p th:text="${novel.author}">Author</p>-->
+<!--                  <a th:href="@{/novel/} + ${novel.id}" th:text="#{read}" class="read-button">Read</a>-->
                 </div>
               </div>
             </div>
                   
         </main>
 
-        <footer th:replace="fragments/footer :: footer"></footer>
+<!--        <footer th:replace="fragments/footer :: footer"></footer>-->
 
     </body>
 </html>

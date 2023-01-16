@@ -12,7 +12,7 @@
         <div class="admin">
         <header class="admin__header">
             <a href="#" class="logo">
-                <h1>GridAdmin</h1>
+                <img class="img-logo" th:src="@{~/images/logo.png}" alt="">
             </a>
             <div class="toolbar">
 
@@ -23,9 +23,6 @@
         </header>
         <nav class="admin__nav">
 
-            <div class="add_btn">
-                <button class="btn btn--primary">Add New Smth</button>
-            </div>
 
             <ul class="menu">
                 <li class="menu__item">
@@ -49,6 +46,12 @@
             </ul>
         </nav>
         <main class="admin__main">
+
+            <div class="add_btn">
+                <button class="btn btn--primary">Add New Smth</button>
+            </div>
+
+
             <h2>Dashboard</h2>
             <div class="dashboard">
                 <div class="dashboard__item">

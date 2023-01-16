@@ -1,25 +1,36 @@
 <div class="header" th:fragment="header">
     <div class="top-header">
-      <img th:src="@{/img/logo.png}" class="logo" alt="Logo">
+      <img th:src="@{~/images/logo.png}" class="logo" alt="Logo">
       <form class="search-form">
-        <input type="text" placeholder="Search...">
-        <button type="submit" class="search-button">
+<!--          <label>-->
+              <input type="text" placeholder="Search...">
+<!--          </label>-->
+          <button type="submit" class="search-button">
           <i class="fas fa-search"></i>
         </button>
       </form>
       <div class="profile-pic-container">
-        <img th:src="@{/img/logo.png}" class="profile-pic" alt="Profile Picture">
+        <img  class="profile-pic" alt="Profile Picture" th:src="@{~/images/logo.png}">
         <div class="dropdown-content">
 <!--          <a th:href="@{/logout}" th:text="#{logout}">Logout</a>-->
-<!--          <a th:href="@{/settings}" th:text="#{settings}">Settings</a>-->
+          <a th:href="@{~/homepage/user_profile}" >Profile</a>
+          <a th:href="@{~/homepage/user_profile}" >Settings</a>
+<!--          <a th:href="@{/homepage/user-profile}" th:text="#{profile}">Settings</a>-->
         </div>
       </div>
     </div>
     <div class="bottom-header">
-<!--      <a th:href="@{/home}" th:text="#{home}">Home</a>-->
-<!--      <a th:href="@{/library}" th:text="#{library}">Library</a>-->
-<!--      <a th:href="@{/profile}" th:text="#{profile}">Profile</a>-->
-<!--      <a th:href="@{/aboutus}" th:text="#{aboutus}">About Us</a>-->
+      <a th:href="@{~/homepage/home}" >Home</a>
+<!--      <a th:href="@{~/homepage/library}" >Library</a>-->
+      <a th:href="@{~/homepage/profile}" >Profile</a>
+<!--      <a th:href="@{~/homepage/aboutus}" >About Us</a>-->
+
+
+<!--&lt;!&ndash;      // make after completing all &ndash;&gt;-->
+<!--      <a th:href="@{homepage/home}" th:text="#{home}">Home</a>-->
+<!--      <a th:href="@{/homepage/library}" th:text="#{library}">Library</a>-->
+<!--      <a th:href="@{/homepage/profile}" th:text="#{profile}">Profile</a>-->
+<!--      <a th:href="@{/aboutus}" th:text="#{about_us}">About Us</a>-->
     </div>
-  </div>
+</div>
   

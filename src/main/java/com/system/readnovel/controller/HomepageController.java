@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 @RequestMapping("/homepage")
 public class HomepageController {
-    @GetMapping("/landing_page")
-    public String getLandingPage() {
-        return "landingpage";
-    }
+//    @GetMapping("/landing_page")
+//    public String getLandingPage() {
+//        return "landingpage";
+//    }
 
     @GetMapping("/home")
     public String getHomePage(){
@@ -25,6 +25,9 @@ public class HomepageController {
     public  String getRegister(){
         return "register_user";
     }
+
+    @GetMapping("/user_profile")
+    public String getUserProfile(){return "user_profile";}
 
 //    @Autowired
 //    private NovelService novelService;
