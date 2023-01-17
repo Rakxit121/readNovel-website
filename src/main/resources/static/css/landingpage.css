@@ -7,6 +7,10 @@ Utilities
 * {
     box-sizing: border-box;
 }
+.cf{
+    display: flex;
+
+}
 
 .cf::before,
 .cf::after {
@@ -40,9 +44,9 @@ body {
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, ul, ol, p {
-    margin-top: 0;
-}
+/*h1, h2, h3, h4, h5, h6, ul, ol, p {*/
+/*    margin-top: 0;*/
+/*}*/
 
 h1 {
     font-weight: 900;
@@ -86,6 +90,8 @@ Navigation
 }
 
 nav {
+    display: flex;
+    align-items: center;
     background-color: #fff;
     box-shadow: 0 2px 2px rgba(0,0,0,.45);
     position: relative;
@@ -151,8 +157,8 @@ Sections
 ======================== */
 
 .splash {
-    background: linear-gradient(rgba(44, 62, 80, 0.65), rgba(52, 152, 219, 0.65)),
-    url("https://images.unsplash.com/photo-1452796907770-ad6cd374b12d?crop=entropy&fit=crop&fm=jpg&h=1000&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925") no-repeat fixed center;
+    background: linear-gradient( rgba(52, 152, 219, 0.65), #6d00dc),
+    url("../images/BG.jpg") no-repeat fixed center;
     background-size: cover;
     color: #fff;
 }
@@ -212,7 +218,7 @@ Sections
 }
 
 .intro {
-    background-color: #E74C3C;
+    background-image: linear-gradient(to right,#c03cff, #6d00dc);
     color: #fff;
 }
 

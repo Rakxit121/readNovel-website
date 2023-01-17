@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping
 public class LoginController {
 
+
     @GetMapping("/homepage")
     public  String getPage(){
         return "landingpage";

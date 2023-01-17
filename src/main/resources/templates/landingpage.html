@@ -7,31 +7,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Landing Page</title>
     <link rel="stylesheet" th:href="@{~/css/landingpage.css}">
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+    <link rel="stylesheet" th:href="@{~/css/footer.css}">
+    <link rel="stylesheet" th:href="@{~/css/header.css}">
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css}">
+
+    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
   <body>
   <nav class="container-fluid nav">
     <div class="container cf">
       <div class="brand">
-        <a href="#splash">Mr. Roboto</a>
+        <a href="#splash">ReadNovel</a>
       </div>
       <i class="fa fa-bars nav-toggle"></i>
       <ul>
         <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills &amp; Experience</a></li>
         <li><a href="#Intro" class="nav-link w-nav-link">Intro</a></li>
         <li><a href="#Features" class="nav-link w-nav-link">Features</a></li>
         <li><a href="#Testimonials" class="nav-link w-nav-link">Testimonials</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div class="nav-right">
        <div class="w-layout-grid nav-buttons">
-           <a th:href="@{~/homepage/register}" target="_blank" class="button small ghost-bg w-button">Sign up</a>
+           <a th:href="@{~/homepage/register}"  class="button small ghost-bg w-button">Sign up</a>
       <!--              on click open the login -->
-           <a onclick="document.getElementById('id01').style.display='block'" style="width:60%;" href="#"  class="button small white w-button">Login</a>
+           <a onclick="document.getElementById('id01').style.display='block'" style="width:60%;" th:href="@{~/login}"  class="button small white w-button">Login</a>
 
        </div>
     </div>
@@ -40,36 +42,29 @@
 
   <div class="container-fluid splash" id="splash">
     <div class="container">
-      <img src="https://s10.postimg.org/jvo3z5kux/QTr_B8o_S.jpg" alt="Portrait of Mr. Roboto" class="profile-image">
-      <h1>Mr. Roboto</h1>
-      <span class="lead">Android Life Form</span>
+      <img th:src="@{/images/logo.png}" alt="Portrait of ReadNovel" class="profile-image">
+      <h1>ReadNovel</h1>
+      <span class="lead">Know More</span>
       <span class="continue"><a href="#about"><i class="fa fa-angle-down"></i></a></span>
     </div>
   </div>
 
-  <div class="container-fluid intro" id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias ratione impedit soluta amet quas saepe temporibus <a href="#">eum reprehenderit</a> voluptas! A nihil adipisci itaque quos quo dolorum consequuntur iusto facere quaerat, excepturi quod, necessitatibus aliquid quae est qui, aut in assumenda animi tempora debitis. Beatae, veritatis, delectus. Repellat dolore, molestias nam.</p>
-    </div>
-  </div>
-
-  <div class="container-fluid features" id="skills">
+  <div class="container-fluid features" id="features">
     <div class="container cf">
-      <h2>Skills &amp; Experience</h2>
+      <h2>Our Features</h2>
       <div class="col-3">
         <img src="https://s22.postimg.org/oi5es3fkx/icon_cloud.png" alt="">
-        <h3>Cloud Computing</h3>
+        <h3>Free to Read</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda modi maiores eum commodi soluta, blanditiis voluptates ea eos, cim! Neque.</p>
       </div>
       <div class="col-3">
         <img src="https://s22.postimg.org/jxj8d5vvl/icon_coding.png" alt="">
-        <h3>Expert Coding</h3>
+        <h3>Splendid Translation</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda modi maiores eum commodi soluta, blanditiis voluptates ea eos, cim! Neque.</p>
       </div>
       <div class="col-3">
         <img src="https://s22.postimg.org/citwksa01/icon_graph.png" alt="">
-        <h3>Data Analysis</h3>
+        <h3>Immersive</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda modi maiores eum commodi soluta, blanditiis voluptates ea eos, cim! Neque.</p>
       </div>
     </div>
@@ -77,22 +72,32 @@
 
   <div class="container-fluid portfolio" id="portfolio">
     <div class="container cf">
-      <h2>Portfolio</h2>
+      <h2>Some Popular Novels</h2>
       <div class="gallery">
-        <div class="gallery-image"><img src="https://unsplash.it/800/450?image=250" alt=""></div>
-        <div class="gallery-image"><img src="https://unsplash.it/800/450?image=249" alt=""></div>
-        <div class="gallery-image"><img src="https://unsplash.it/800/450?image=248" alt=""></div>
-        <div class="gallery-image"><img src="https://unsplash.it/800/450?image=247" alt=""></div>
-        <div class="gallery-image"><img src="https://unsplash.it/800/450?image=239" alt=""></div>
-        <div class="gallery-image"><img src="https://unsplash.it/800/450?image=238" alt=""></div>
+        <div class="gallery-image"><a href="#"><img src="https://unsplash.it/800/450?image=250" alt=""></a></div>
+        <div class="gallery-image"><a href="#"><img src="https://unsplash.it/800/450?image=249" alt=""></a></div>
+        <div class="gallery-image"><a href="#"><img src="https://unsplash.it/800/450?image=248" alt=""></a></div>
+        <div class="gallery-image"><a href="#"><img src="https://unsplash.it/800/450?image=247" alt=""></a></div>
+        <div class="gallery-image"><a href="#"><img src="https://unsplash.it/800/450?image=239" alt=""></a></div>
+        <div class="gallery-image"><a href="#"><img src="https://unsplash.it/800/450?image=238" alt=""></a></div>
       </div>
     </div>
   </div>
 
+
+
+  <div class="container-fluid intro" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias ratione impedit soluta amet quas saepe temporibus <a href="#">eum reprehenderit</a> voluptas! A nihil adipisci itaque quos quo dolorum consequuntur iusto facere quaerat, excepturi quod, necessitatibus aliquid quae est qui, aut in assumenda animi tempora debitis. Beatae, veritatis, delectus. Repellat dolore, molestias nam.</p>
+    </div>
+  </div>
+
+
   <div class="container-fluid contact" id="contact">
     <div class="container">
       <form>
-        <h2>Contact Me</h2>
+        <h2>Contact Us</h2>
         <input type="text" placeholder="Name" id="name" name="name" class="full-half">
         <input type="email" placeholder="Email" id="email" name="email" class="full-half">
         <input type="text" placeholder="Subject" id="subject" name="subject">
@@ -102,15 +107,20 @@
     </div>
   </div>
 
-  <footer class="container-fluid footer">
-    <div class="container">
-      <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-      <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-      <a href="#" target="_blank"><i class="fa fa-github"></i></a>
-      <a href="#" target="_blank"><i class="fa fa-dribbble"></i></a>
-      <a href="#" target="_blank"><i class="fa fa-codepen"></i></a>
-    </div>
-  </footer>
+<!--  <footer class="container-fluid footer">-->
+<!--    <div class="container">-->
+<!--      <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>-->
+<!--      <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>-->
+<!--      <a href="#" target="_blank"><i class="fa fa-github"></i></a>-->
+
+<!--    </div>-->
+<!--  </footer>-->
+
+
+
+  <footer th:replace="fragment/footer_frag.html :: footer"></footer>
+
+
   </body>
 </html>
 
