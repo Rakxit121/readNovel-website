@@ -20,18 +20,18 @@
       <div class="user_options-forms" id="user_options-forms">
         <div class="user_forms-login">
           <h2 class="forms_title">Login</h2>
-          <form class="forms_form">
+          <form class="forms_form" th:action="@{/login}" method="post">
             <fieldset class="forms_fieldset">
               <div class="forms_field">
-                <input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+                <input type="email" placeholder="Email" class="forms_field-input" id="E-mail" name="email" required autofocus/>
               </div>
               <div class="forms_field">
-                <input type="password" placeholder="Password" class="forms_field-input" required />
+                <input type="password" placeholder="Password" class="forms_field-input"id="Password" name="password" onclick="validateEmail()" onkeypress="validateEmail()" required autofocus />
               </div>
             </fieldset>
             <div class="forms_buttons">
               <button type="button" class="forms_buttons-forgot">Forgot password?</button>
-              <input th:href="@{~/login/loggedin}" type="submit" value="Log In" class="forms_buttons-action">
+              <input th:href="@{~/login/loggedin}" type="submit" value="Log In" class="forms_buttons-action" onclick="fill()" >
             </div>
           </form>
         </div>
@@ -40,5 +40,6 @@
   </section>
 
   <script th:src="@{~/js/login.js}"></script>
+  <script th:src="@{~/js/user-login.js}" defer></script>
   </body>
 </html>
