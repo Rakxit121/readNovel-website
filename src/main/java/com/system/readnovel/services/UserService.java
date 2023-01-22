@@ -8,6 +8,4 @@ public interface UserService {
 
     String save(UserPojo userpojo);
     UserPojo findByEmail(String email);
-
-    UserPojo findByPassword(String password);
 }

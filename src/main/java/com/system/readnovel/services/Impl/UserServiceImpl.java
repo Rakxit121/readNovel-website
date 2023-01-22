@@ -1,5 +1,7 @@
 package com.system.readnovel.services.Impl;
 
+import com.system.readnovel.config.PasswordEncoderUtil;
+import com.system.readnovel.exception.AppException;
 import com.system.readnovel.services.UserService;
 import com.system.readnovel.entity.User;
 import com.system.readnovel.pojo.UserPojo;
@@ -7,6 +9,7 @@ import com.system.readnovel.entity.*;
 import com.system.readnovel.repo.*;
 import com.system.readnovel.repo.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,7 +24,7 @@ public class UserServiceImpl implements UserService{
         user.setEmail(userPojo.getEmail());
         user.setFullname(userPojo.getFullname());
         user.setUsername(userPojo.getUsername());
-        user.setPassword(userPojo.getPassword());
+        user.setPassword(PasswordEncoderUtil.getInstance().encode(userPojo.getPassword()));
         userRepo.save(user);
         return "created";
     }
@@ -29,15 +32,8 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public UserPojo findByEmail(String email) {
-        User user = (User) userRepo.findByEmail(email)
-                .orElseThrow(()-> new RuntimeException("Invalid User email"));
-        return new UserPojo(user);
-    }
-
-    @Override
-    public UserPojo findByPassword(String password) {
-        User user = (User) userRepo.findByPassword(password)
-                .orElseThrow(() -> new RuntimeException("Invalid User password"));
+        User user = userRepo.findByEmail(email)
+                .orElseThrow(() -> new AppException("Invalid User email", HttpStatus.BAD_REQUEST));
         return new UserPojo(user);
     }
 

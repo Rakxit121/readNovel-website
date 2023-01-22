@@ -60,6 +60,31 @@ a, a:hover, a:focus, a:active, a:visited {
     color: #E74C3C;
     text-decoration: underline;
 }
+.nav-right{
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+}
+.nav-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.button
+{
+    border-radius: 4px;
+    border: solid #6d00dc 2px;
+    padding: 13px;
+    margin: 10px;
+}
+.button:hover{
+    background-color: #6d00dc;
+    color: white;
+}
+
+
 
 /* ========================
 Containers
@@ -73,6 +98,7 @@ Containers
     margin: 0 auto;
     max-width: 996px;
 }
+
 
 /* ========================
 Navigation

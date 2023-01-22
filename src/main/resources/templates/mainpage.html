@@ -13,19 +13,45 @@
         <header th:replace="fragment/header_frag.html :: header"></header>
 
         <main>
-            <div class="container">
-              <h1 >Latest Releases</h1>
-<!--              <h1 th:text="#{latestReleases}">Latest Releases</h1>-->
-              <div class="novel-list">
-<!--                <div class="novel" th:each="novel : ${latestNovels}">-->
-<!--                  <img th:src="@{/img/novels/} + ${novel.coverImage}" alt="Novel Cover">-->
-<!--                  <h2 th:text="${novel.title}">Novel Title</h2>-->
-<!--                  <p th:text="${novel.author}">Author</p>-->
-<!--                  <a th:href="@{/novel/} + ${novel.id}" th:text="#{read}" class="read-button">Read</a>-->
-                </div>
-              </div>
-            </div>
-                  
+<!--            <div class="container">-->
+<!--              <h1 >Latest Releases</h1>-->
+<!--&lt;!&ndash;              <h1 th:text="#{latestReleases}">Latest Releases</h1>&ndash;&gt;-->
+<!--              <div class="novel-list">-->
+<!--&lt;!&ndash;                <div class="novel" th:each="novel : ${latestNovels}">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <img th:src="@{/img/novels/} + ${novel.coverImage}" alt="Novel Cover">&ndash;&gt;-->
+<!--&lt;!&ndash;                  <h2 th:text="${novel.title}">Novel Title</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <p th:text="${novel.author}">Author</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                  <a th:href="@{/novel/} + ${novel.id}" th:text="#{read}" class="read-button">Read</a>&ndash;&gt;-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+
+
+<!--            <div class="row">-->
+<!--                <hr>-->
+<!--                <div th:each="novel : ${novels}">-->
+<!--                    <div class="col-6">-->
+<!--                        <div class="novel-card">-->
+<!--                            <img th:src="${novel.image}" class="novel-image" alt="Novel Image">-->
+<!--                            <h3>-->
+<!--                                <a th:href="${novel.link}" th:text="${novel.title}"></a>-->
+<!--                            </h3>-->
+<!--                            <div class="novel-review">-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                                <i class="fas fa-star-half-alt"></i>-->
+<!--                            </div>-->
+<!--                            <div class="novel-read-more">-->
+<!--                                <a th:href="${novel.link}" class="btn btn-primary">Read More</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+
         </main>
 
         <footer th:replace="fragment/footer_frag.html :: footer"></footer>

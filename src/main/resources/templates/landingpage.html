@@ -16,10 +16,12 @@
   </head>
   <body>
   <nav class="container-fluid nav">
+    <div class="brand">
+<!--      <a href="#splash">ReadNovel</a>-->
+      <img th:src="@{~/images/logo.png}" class="logo" alt="Logo">
+    </div>
     <div class="container cf">
-      <div class="brand">
-        <a href="#splash">ReadNovel</a>
-      </div>
+
       <i class="fa fa-bars nav-toggle"></i>
       <ul>
         <li><a href="#about">About Me</a></li>
@@ -31,9 +33,9 @@
     </div>
     <div class="nav-right">
        <div class="w-layout-grid nav-buttons">
-           <a th:href="@{~/homepage/register}"  class="button small ghost-bg w-button">Sign up</a>
+           <a th:href="@{~/homepage/register}"  class="button small ghost-bg w-button" >Sign up</a>
       <!--              on click open the login -->
-           <a onclick="document.getElementById('id01').style.display='block'" style="width:60%;" th:href="@{~/login}"  class="button small white w-button">Login</a>
+           <a onclick="document.getElementById('id01').style.display='block'"  th:href="@{~/login}"  class="button small white w-button">Login</a>
 
        </div>
     </div>
@@ -42,7 +44,6 @@
 
   <div class="container-fluid splash" id="splash">
     <div class="container">
-      <img th:src="@{/images/logo.png}" alt="Portrait of ReadNovel" class="profile-image">
       <h1>ReadNovel</h1>
       <span class="lead">Know More</span>
       <span class="continue"><a href="#about"><i class="fa fa-angle-down"></i></a></span>
@@ -50,7 +51,7 @@
   </div>
 
   <div class="container-fluid features" id="features">
-    <div class="container cf">
+    <div class="container cf" style="display: contents;">
       <h2>Our Features</h2>
       <div class="col-3">
         <img src="https://s22.postimg.org/oi5es3fkx/icon_cloud.png" alt="">
@@ -71,7 +72,7 @@
   </div>
 
   <div class="container-fluid portfolio" id="portfolio">
-    <div class="container cf">
+    <div class="container cf" style="display: contents;">
       <h2>Some Popular Novels</h2>
       <div class="gallery">
         <div class="gallery-image"><a href="#"><img src="https://unsplash.it/800/450?image=250" alt=""></a></div>
