@@ -28,13 +28,15 @@ public class LoginController {
 //        return "landingpage";
 //    }
 
+
     @GetMapping("/login")
     public String showLoginPage() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
             return "login";
         }
-        return "redirect:mainpage"; //login paxi ka lane ho tya redirect gara hai
+        //redirecting to page after the login is complete
+        return "redirect:/main";
     }
 
 }

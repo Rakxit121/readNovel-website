@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/main")
+@RequestMapping("")
 
 public class MainPageController {
     private final UserService userService;
 
-    @GetMapping("")
+    @GetMapping("/main")
     public String geMainPage() {
 //        model.addAttribute("feedback", new FeedbackPojo());
 

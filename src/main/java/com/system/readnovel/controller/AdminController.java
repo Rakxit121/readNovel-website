@@ -21,5 +21,11 @@ public class AdminController {
         return "Dashboard";
     }
 
+    @GetMapping("/novelList")
+    public String getNovelList(){
+        return "adminBookList";
+    }
+
+
 
 }

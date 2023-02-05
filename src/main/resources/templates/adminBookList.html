@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Admin Novel List</title>
+        <link rel="stylesheet" th:href="@{~/css/dashboard.css}">
+        <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="admin">
+            <header class="admin__header">
+                <a href="#" class="logo">
+                    <img class="img-logo" th:src="@{~/images/logo.png}" alt="">
+                </a>
+                <div class="toolbar">
+
+                    <a href="#" class="logout">
+                        Log Out
+                    </a>
+                </div>
+            </header>
+            <nav class="admin__nav">
+
+
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Dashboard</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Novel List</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Customer list</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Profile</a>
+                    </li>
+                    <!--                <li class="menu__item">-->
+                    <!--                    <a class="menu__link" href="#"></a>-->
+                    <!--                </li>-->
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Settings</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <div class="wrapper-top">
+                <h2>Bookings</h2>
+                <button class="btn1"><a th:href="@{/admin/newbooking}">+ New Novels</a></button>
+
+                <!--<div style="overflow: scroll">-->
+                <table id="table_id" >
+                    <thead>
+                    <tr>
+                        <th>Novel_Id</th>
+                        <th>Images</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Genre</th>
+                        <th>Date_Added</th>
+                        <th>PDF</th>
+                        <th>Chapters</th>
+                        <th>Synopsis</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--                <tr th:each="booking:${bookinglist}">-->
+                    <!--                    <td th:text="${booking.id}"></td>-->
+                    <!--                    <td th:text="${booking.fullname}"></td>-->
+                    <!--                    <td th:text="${booking.rooms}"></td>-->
+                    <!--                    <td th:text="${booking.date}"></td>-->
+                    <!--                    <td th:text="${booking.checkin}"></td>-->
+                    <!--                    <td th:text="${booking.checkout}"></td>-->
+                    <!--                    <td th:text="${booking.total}"></td>-->
+                    <!--                    <td th:text="${booking.mobileNo}"></td>-->
+                    <!--                    <td th:text="${booking.number_of_people}"></td>-->
+                    <!--                    &lt;!&ndash;                    <td> <a class="edit" href="#" >Active</a></td>&ndash;&gt;-->
+                    <!--                    &lt;!&ndash;                    <td> <a class="edit" href="#" >delete</a></td>&ndash;&gt;-->
+                    <!--                    &lt;!&ndash;                    <td> <a class="edit" href="#" >edit</a></td>&ndash;&gt;-->
+                    <!--                    <td> <a class="delete_button" th:href="@{~/admin/delete/}+${booking.id}" >delete</a></td>-->
+                    <!--                    <td> <a class="edit_button" th:href="@{~/admin/edit/}+${booking.id}" >edit</a></td>-->
+                    <!--                    <td> <a class="bill_button" th:href="@{~/admin/bill/}+${booking.id}">Bill</a></td>-->
+
+                    <!--                </tr>-->
+                    <!--                </tbody>-->
+                </table>
+                <!--</div>-->
+                <script
+                        type="text/javascript"
+                        charset="utf8"
+                        src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"
+                ></script>
+                <script
+                        type="text/javascript"
+                        charset="utf8"
+                        src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js">
+                    document.getElementsByClassName()
+                </script>
+                <script >
+                    $(function() {
+                        $("#table_id").dataTable();
+                    });
+                </script>
+
+
+            </div>
+
+
+
+
+            <footer class="admin__footer">
+                <ul class="ticker">
+                    <li class="ticker__item"><h2>Footer list</h2></li>
+
+                </ul>
+                <span>
+
+                </span>
+            </footer>
+        </div>
+    </body>
+</html>
