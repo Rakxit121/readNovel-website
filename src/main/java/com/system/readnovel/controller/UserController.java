@@ -1,8 +1,12 @@
 package com.system.readnovel.controller;
 
+import com.system.readnovel.pojo.FeedbackPojo;
 import com.system.readnovel.pojo.UserPojo;
 import com.system.readnovel.services.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import jakarta.validation.Valid;
@@ -27,6 +31,16 @@ public class UserController {
     public String saveUser(@Valid UserPojo userpojo) {
         userService.save(userpojo);
         return "login";
+    }
+
+    @PostMapping("/savefeedback")
+    public String getFeedback(@Valid FeedbackPojo feedbackPojo){
+//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+//        if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
+//            return "login";
+//        }
+        userService.submitFeedback(feedbackPojo);
+        return "redirect:/homepage";
     }
 
 }

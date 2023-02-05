@@ -1,5 +1,6 @@
 package com.system.readnovel.controller;
 
+import com.system.readnovel.pojo.FeedbackPojo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomepageController {
 
     @GetMapping("")
-    public String geHomepage() {
-//        model.addAttribute("feedback", new FeedbackPojo());
+    public String geHomepage(Model model) {
+        model.addAttribute("feedback", new FeedbackPojo());
 
         return ("landingpage");
     }

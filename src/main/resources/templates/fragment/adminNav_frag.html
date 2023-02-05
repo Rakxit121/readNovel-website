@@ -1,0 +1,44 @@
+<div class="adminNav" th:fragment="adminNav">
+
+    <div class="admin">
+        <header class="admin__header">
+            <a href="#" class="logo">
+                <img class="img-logo" th:src="@{~/images/logo.png}" alt="">
+            </a>
+            <div class="toolbar">
+
+                <a href="#" class="logout">
+                    Log Out
+                </a>
+            </div>
+        </header>
+
+        <nav class="admin__nav">
+
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="menu__link" th:href="@{~/admin}">Dashboard</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" th:href="@{~/admin/novelList}">Novel List</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Customer list</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" th:href="@{~/admin/userComments}">Comment List</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Profile</a>
+                </li>
+                <!--                <li class="menu__item">-->
+                <!--                    <a class="menu__link" href="#"></a>-->
+                <!--                </li>-->
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Settings</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
