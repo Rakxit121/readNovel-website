@@ -13,21 +13,23 @@ footer {
   
   .left-section, .center-section, .right-section {
     width: 33%;
+    text-decoration: none;
   }
   
   .logo {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 40px;
   }
   
   .right-section a {
     color: #fff;
     font-size: 24px;
     margin-left: 8px;
+    text-decoration: none;
   }
   @media (max-width: 600px) {
     .logo {
-      width: 40px;
+      width: 90px;
       height: 40px;
     }
   

@@ -27,6 +27,12 @@ public class AdminController {
         return "adminBookList";
     }
 
+
+    @GetMapping("/novelForm")
+    public String getNovelForm(){
+        return "adminNovelForm";
+    }
+
     @GetMapping("/userComments")
     public String getUserComments(Model model){
         List<Feedback> feedbacks = userService.fetchAllFeedback();
@@ -44,6 +50,7 @@ public class AdminController {
 //        userService.deletecomment(id);
 //        return "redirect:/admin/contactfetch";
 //    }
+
 
 
 
