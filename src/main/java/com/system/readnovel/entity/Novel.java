@@ -93,4 +93,7 @@ public class Novel {
     public void setLatestChapter(String latestChapter) {
         this.latestChapter = latestChapter;
     }
+
+    public void setImageData(byte[] imageData) {
+    }
 }

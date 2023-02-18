@@ -1,149 +1,5 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
-<!--  <head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
-<!--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
-<!--    <title>Admin Novel List form</title>-->
-<!--    <link rel="stylesheet" th:href="@{~/css/AdminNovelForm.css}">-->
-<!--  </head>-->
 
-<!--  <body>-->
-<!--  <form action="submit-form" method="post">-->
-<!--    <label for="website-link">Website Link:</label>-->
-<!--    <input type="text" id="website-link" name="website-link" required>-->
-
-<!--    <button type="submit">Submit</button>-->
-<!--  </form>-->
-
-<!--  &lt;!&ndash; Output section &ndash;&gt;-->
-<!--  <div id="output-section">-->
-<!--    <p>Title: <span id="title"></span></p>-->
-<!--    <p>Description: <span id="description"></span></p>-->
-<!--    <p>Author: <span id="author"></span></p>-->
-<!--    <p>Rating: <span id="rating"></span></p>-->
-<!--    <p>Genre: <span id="genre"></span></p>-->
-<!--    <p>Status: <span id="status"></span></p>-->
-<!--    <p>Latest Chapter: <span id="latest-chapter"></span></p>-->
-<!--  </div>-->
-
-<!--  <script>-->
-<!--    const form = document.querySelector("form");-->
-<!--    const outputSection = document.querySelector("#output-section");-->
-
-<!--    form.addEventListener("submit", async (event) => {-->
-<!--      event.preventDefault();-->
-
-<!--      // Get the website link from the form input-->
-<!--      const websiteLink = document.querySelector("#website-link").value;-->
-
-<!--      // Call the API with the website link-->
-<!--      const response = await fetch(`https://api.example.com/novel-info?website-link=${websiteLink}`);-->
-<!--      const data = await response.json();-->
-
-<!--      // Update the output section with the data from the API-->
-<!--      document.querySelector("#title").innerHTML = data.title;-->
-<!--      document.querySelector("#description").innerHTML = data.description;-->
-<!--      document.querySelector("#author").innerHTML = data.author;-->
-<!--      document.querySelector("#rating").innerHTML = data.rating;-->
-<!--      document.querySelector("#genre").innerHTML = data.genre;-->
-<!--      document.querySelector("#status").innerHTML = data.status;-->
-<!--      document.querySelector("#latest-chapter").innerHTML = data.latestChapter;-->
-
-<!--      // Show the output section-->
-<!--      outputSection.style.display = "block";-->
-<!--    });-->
-<!--  </script>-->
-
-
-
-<!--  </body>-->
-<!--</html>-->
-
-
-
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--<head>-->
-<!--  <meta charset="utf-8">-->
-<!--  <title>Website Info Form</title>-->
-<!--  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
-<!--  <style>-->
-<!--    .form-container {-->
-<!--      max-width: 400px;-->
-<!--      margin: 0 auto;-->
-<!--      text-align: center;-->
-<!--    }-->
-
-<!--    .form-control {-->
-<!--      padding: 10px;-->
-<!--      width: 100%;-->
-<!--      margin-bottom: 20px;-->
-<!--      border-radius: 5px;-->
-<!--      border: none;-->
-<!--      font-size: 18px;-->
-<!--    }-->
-
-<!--    .form-submit {-->
-<!--      background-color: #8400ff;-->
-<!--      color: white;-->
-<!--      padding: 10px 20px;-->
-<!--      border-radius: 5px;-->
-<!--      border: none;-->
-<!--      font-size: 18px;-->
-<!--      cursor: pointer;-->
-<!--    }-->
-
-<!--    .form-submit:hover {-->
-<!--      background-color: #ff005a;-->
-<!--    }-->
-<!--  </style>-->
-<!--</head>-->
-<!--<body>-->
-<!--<div class="form-main">-->
-<!--  <div class="form-container">-->
-<!--    <h2>Get Website Info</h2>-->
-<!--    <form id="form-website">-->
-<!--      <input type="text" name="website" class="form-control" placeholder="Enter Website URL">-->
-<!--      <input type="submit" value="Submit" class="form-submit">-->
-<!--    </form>-->
-<!--    <div id="response-container"></div>-->
-<!--  </div>-->
-<!--</div>-->
-
-<!--<script>-->
-<!--  $(document).ready(function() {-->
-<!--    $("#form-website").submit(function(e) {-->
-<!--      e.preventDefault();-->
-
-<!--      var website = $("input[name='website']").val();-->
-
-<!--      if (website === "") {-->
-<!--        alert("Please enter a website URL.");-->
-<!--        return;-->
-<!--      }-->
-
-<!--      $.ajax({-->
-<!--        type: "GET",-->
-<!--        url: "your-api-endpoint",-->
-<!--        data: { website: website },-->
-<!--        success: function(response) {-->
-<!--          var title = response.title;-->
-<!--          var description = response.description;-->
-<!--          $("#response-container").html(-->
-<!--                  "<p><strong>Title:</strong> " + title + "</p>" +-->
-<!--                  "<p><strong>Description:</strong> " + description + "</p>"-->
-<!--          );-->
-<!--        }-->
-<!--      });-->
-<!--    });-->
-<!--  });-->
-<!--</script>-->
-<!--</body>-->
-<!--</html>-->
-
-
-<!doctype html>
+<!Doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -154,14 +10,24 @@
   </head>
     <style>
       .form-container {
-        max-width: 400px;
-        margin: 0 auto;
+        display: flex;
+        max-width: 70%;
+        height: 80%;
+        margin: 8% auto;
         text-align: center;
-        border: 1px solid #ccc;
+        border: 1px solid #8d8585;
+        border-radius: 10px;
         padding: 20px;
+        justify-content: space-evenly;
       }
 
-      .form-control {
+      #web-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #link-input {
         padding: 10px;
         width: 100%;
         margin-bottom: 20px;
@@ -170,7 +36,19 @@
         font-size: 18px;
       }
 
-      .form-submit {
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      #submit-btn {
         background-color: #8400ff;
         color: white;
         padding: 10px 20px;
@@ -180,24 +58,57 @@
         cursor: pointer;
       }
 
-      .form-submit:hover {
+      #submit-btn:hover {
         background-color: #ff005a;
       }
 
+
+      button {
+        background-color: #8400ff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #ff005a;
+      }
+
+      #image-preview-container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+
+      #image-preview {
+        width: 80%;
+        height: 90%;
+        display: flex;
+        margin: 0 auto;
+      }
+
+
+
     </style>
   <body>
-  <form id="web-form">
-    <input type="text" id="link-input" placeholder="Enter website link">
-    <div class="form-group">
-      <label for="image-upload">Upload Image:</label>
-      <input type="file" name="image" id="image-upload" accept="image/*" onchange="displayImage(this)">
-    </div>
-    <button type="submit" id="submit-btn">Submit</button>
-  </form>
-  <div id="image-preview-container">
-    <img id="image-preview" src="" style="display: none; width: 20%; height: 20%">
+  <div class="form-container">
+    <form id="web-form">
+      <input type="text" id="link-input" placeholder="Enter website link">
+      <div class="form-group">
+        <label for="image-upload">Upload Image:</label>
+        <input type="file" name="image" id="image-upload" accept="image/*" onchange="displayImage(this)">
+      </div>
+      <div id="image-preview-container">
+        <img id="image-preview" src="" >
+      </div>
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
   </div>
-  <div id="response-container"></div>
+
+<!--  <div id="response-container"></div>-->
 
   <script>
     function displayImage(input) {
