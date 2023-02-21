@@ -2,14 +2,13 @@ package com.system.readnovel.controller;
 
 
 import com.system.readnovel.entity.Novel;
+import com.system.readnovel.entity.PageData;
 import com.system.readnovel.repo.NovelRepo;
-import com.system.readnovel.repo.PageDataRepository;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 

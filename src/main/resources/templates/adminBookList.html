@@ -24,8 +24,9 @@
 
 
 
-            <div class="wrapper-top" style="flex-direction: column; ">
-                <h2>Bookings</h2>
+            <div class="wrapper-top" style="flex-direction: column;
+            width: 100%; margin: 8px; padding: 16px;">
+                <h2>bookss</h2>
                 <button class="btn1"><a th:href="@{/admin/novelForm}">+ New Novels</a></button>
 
                 <!--<div style="overflow: scroll">-->
@@ -37,33 +38,29 @@
                         <th>Title</th>
                         <th>Author</th>
                         <th>Genre</th>
-                        <th>Date_Added</th>
+                        <th>Status</th>
 <!--                        <th>PDF</th>-->
+                        <th>Rating</th>
                         <th>Chapters</th>
                         <th>Synopsis</th>
                         <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
-                                    <tr th:each="booking:${novel}">
-                    <!--                    <td th:text="${booking.id}"></td>-->
-                    <!--                    <td th:text="${booking.fullname}"></td>-->
-                    <!--                    <td th:text="${booking.rooms}"></td>-->
-                    <!--                    <td th:text="${booking.date}"></td>-->
-                    <!--                    <td th:text="${booking.checkin}"></td>-->
-                    <!--                    <td th:text="${booking.checkout}"></td>-->
-                    <!--                    <td th:text="${booking.total}"></td>-->
-                    <!--                    <td th:text="${booking.mobileNo}"></td>-->
-                    <!--                    <td th:text="${booking.number_of_people}"></td>-->
-                    <!--                    &lt;!&ndash;                    <td> <a class="edit" href="#" >Active</a></td>&ndash;&gt;-->
-                    <!--                    &lt;!&ndash;                    <td> <a class="edit" href="#" >delete</a></td>&ndash;&gt;-->
-                    <!--                    &lt;!&ndash;                    <td> <a class="edit" href="#" >edit</a></td>&ndash;&gt;-->
-                    <!--                    <td> <a class="delete_button" th:href="@{~/admin/delete/}+${booking.id}" >delete</a></td>-->
-                    <!--                    <td> <a class="edit_button" th:href="@{~/admin/edit/}+${booking.id}" >edit</a></td>-->
-                    <!--                    <td> <a class="bill_button" th:href="@{~/admin/bill/}+${booking.id}">Bill</a></td>-->
+                                    <tr th:each="books:${novel}">
+                                        <td th:text="${books.id}"></td>
+                                        <td th:text="${books.title}"></td>
+                                        <td th:text="${books.author}"></td>
+                                        <td th:text="${books.genre}"></td>
+                                        <td th:text="${books.status}"></td>
+                                        <td th:text="${books.rating}"></td>
+                                        <td th:text="${books.latestChapter}"></td>
+                                        <td th:text="${books.discription}"></td>
 
-                    <!--                </tr>-->
-                    <!--                </tbody>-->
+<!--                                        <td> <a class="delete_button" th:href="@{~/admin/delete/}+${books.id}" >delete</a></td>-->
+<!--                                        <td> <a class="edit_button" th:href="@{~/admin/edit/}+${books.id}" >edit</a></td>-->
+                                    </tr>
+                                    </tbody>
                 </table>
                 <!--</div>-->
                 <script

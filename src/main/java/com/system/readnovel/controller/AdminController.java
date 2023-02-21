@@ -19,6 +19,13 @@ public class AdminController {
     @Autowired
     private UserService userService;
 
+
+    private NovelService novelService;
+
+//    public AdminController(NovelService novelService) {
+//        this.novelService = novelService;
+//    }
+
     @Autowired
 //    private NovelService novelService;
 

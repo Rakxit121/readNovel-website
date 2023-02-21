@@ -1,4 +1,4 @@
-package com.system.readnovel.controller;
+package com.system.readnovel.entity;
 //
 //public class PageData {
 //

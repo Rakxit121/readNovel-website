@@ -1,6 +1,6 @@
 package com.system.readnovel.repo;
 
-import com.system.readnovel.controller.PageData;
+import com.system.readnovel.entity.PageData;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
