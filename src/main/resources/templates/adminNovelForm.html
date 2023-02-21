@@ -104,7 +104,7 @@
       <div id="image-preview-container">
         <img id="image-preview" src="" >
       </div>
-      <button type="submit" id="submit-btn">Submit</button>
+      <button type="submit" onclick="allert()" id="submit-btn">Submit</button>
     </form>
   </div>
 
@@ -164,6 +164,11 @@
                 console.error("Error storing data in database:", error);
               });
     });
+  </script>
+  <script>
+    function allert(){
+      alert("API run sucessful")
+    }
   </script>
 </body>
 </html>

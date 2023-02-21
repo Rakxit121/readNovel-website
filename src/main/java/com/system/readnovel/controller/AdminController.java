@@ -1,6 +1,8 @@
 package com.system.readnovel.controller;
 
 import com.system.readnovel.entity.Feedback;
+import com.system.readnovel.entity.Novel;
+import com.system.readnovel.services.NovelService;
 import com.system.readnovel.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,8 +16,11 @@ import java.util.List;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
+    @Autowired
     private UserService userService;
 
+    @Autowired
+//    private NovelService novelService;
 
     @GetMapping("")
     public String getAdminDashboard(){
@@ -23,7 +28,9 @@ public class AdminController {
     }
 
     @GetMapping("/novelList")
-    public String getNovelList(){
+    public String getNovelList(Model model){
+//        List<Novel> novels = novelService.fetchAllNovel();
+//        model.addAttribute("novel", novels);
         return "adminBookList";
     }
 
@@ -50,6 +57,8 @@ public class AdminController {
 //        userService.deletecomment(id);
 //        return "redirect:/admin/contactfetch";
 //    }
+
+
 
 
 

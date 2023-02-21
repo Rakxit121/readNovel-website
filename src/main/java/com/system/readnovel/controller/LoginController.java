@@ -39,4 +39,12 @@ public class LoginController {
         return "redirect:/main";
     }
 
+    @PostMapping("/logout")
+    public String logout(Authentication authentication) {
+        if (authentication.isAuthenticated()) {
+            SecurityContextHolder.clearContext();
+        }
+        return "redirect:/login";
+    }
+
 }

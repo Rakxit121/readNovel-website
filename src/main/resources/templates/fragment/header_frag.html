@@ -12,25 +12,18 @@
       </form>
       <div class="profile-pic-container">
         <img  class="profile-pic" alt="Profile Picture" th:src="@{~/images/logo.png}">
-        <div class="dropdown-content">
-<!--          <a th:href="@{/logout}" th:text="#{logout}">Logout</a>-->
-<!--          <a th:href="@{~/homepage/user_profile}" >Profile</a>-->
-<!--          <a th:href="@{~/homepage/user_profile}" >Settings</a>-->
-<!--          <a th:href="@{/homepage/user-profile}" th:text="#{profile}">Settings</a>-->
-        </div>
+
+<!--              <button class="dropbtn">Dropdown</button>-->
+              <div class="dropdown-content">
+                  <a th:href="@{~/homepage/user_profile}" >Profile</a>
+                  <a th:href="@{/logout}">Logout</a>
+              </div>
       </div>
     </div>
     <div class="bottom-header">
       <a th:href="@{~/homepage/home}" >Home</a>
-<!--      <a th:href="@{~/homepage/library}" >Library</a>-->
-      <a th:href="@{~/homepage/user_profile}" >Profile</a>
-      <a th:href="@{~/homepage/aboutus}" >About Us</a>
+      <a th:href="@{/bookmarkPage}">Bookmark</a>
 
-
-<!--      // make after completing all -->
-<!--      <a th:href="@{homepage/home}">Home</a>-->
-<!--      <a th:href="@{/homepage/library}">Library</a>-->
-      <a th:href="@{/homepage/user_profile}">Profile</a>
       <a th:href="@{/homepage#about}"  target="_blank">About Us</a>
     </div>
 </div>

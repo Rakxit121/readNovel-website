@@ -20,8 +20,8 @@ public class PageController {
     @Autowired
     private NovelRepo novelRepo;
 
-    @Autowired
-    private PageDataRepository pageDataRepository;
+//    @Autowired
+//    private PageDataRepository pageDataRepository;
 
 //    @GetMapping("/page-data")
 //    public PageData getPageData(@RequestParam String link) {

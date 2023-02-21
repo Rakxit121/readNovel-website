@@ -1,4 +1,10 @@
 /* Menu */
+.header{
+    width: 100%;
+}
+.admin_main{
+    display: flex;
+}
 .admin__menu {
     display: flex;
     flex-direction: column;

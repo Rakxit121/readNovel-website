@@ -13,13 +13,18 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
-        <div class="admin">
+<!--        <div class="admin">-->
 
 
-            <header th:replace="fragment/adminNav_frag.html :: adminNav"></header>
+            <header th:replace="fragment/adminHeader.html :: adminHeader"></header>
+            <main class="admin_main">
+                <div class="admin__sidebar">
+                    <div th:replace="fragment/adminNav_frag.html :: adminNav"></div>
+                </div>
 
 
-            <div class="wrapper-top" style="flex-direction: column">
+
+            <div class="wrapper-top" style="flex-direction: column; ">
                 <h2>Bookings</h2>
                 <button class="btn1"><a th:href="@{/admin/novelForm}">+ New Novels</a></button>
 
@@ -28,19 +33,19 @@
                     <thead>
                     <tr>
                         <th>Novel_Id</th>
-                        <th>Images</th>
+<!--                        <th>Images</th>-->
                         <th>Title</th>
                         <th>Author</th>
                         <th>Genre</th>
                         <th>Date_Added</th>
-                        <th>PDF</th>
+<!--                        <th>PDF</th>-->
                         <th>Chapters</th>
                         <th>Synopsis</th>
                         <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <!--                <tr th:each="booking:${bookinglist}">-->
+                                    <tr th:each="booking:${novel}">
                     <!--                    <td th:text="${booking.id}"></td>-->
                     <!--                    <td th:text="${booking.fullname}"></td>-->
                     <!--                    <td th:text="${booking.rooms}"></td>-->
@@ -80,12 +85,13 @@
 
 
             </div>
+        </main>
 
 
 
 
             <footer th:replace="fragment/adminFooter_frag.html :: adminFooter"></footer>
 
-        </div>
+<!--        </div>-->
     </body>
 </html>
