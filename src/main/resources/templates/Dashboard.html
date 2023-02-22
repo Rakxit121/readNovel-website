@@ -6,87 +6,28 @@
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Admin main Dashboard</title>
-        <link rel="stylesheet" th:href="@{~/css/dashboard.css}">
+        <link rel="stylesheet" th:href="@{~/css/fragement/adminNav.css}">
+        <link rel="stylesheet" th:href="@{~/css/fragement/adminFooter.css}">
+        <link rel="stylesheet" th:href="@{~/css/fragement/adminHeader.css}">
+        <link rel="stylesheet" th:href="@{~/css/adminDashboard.css}">
     </head>
-    <body>
-        <div class="admin">
-        <header class="admin__header">
-            <a href="#" class="logo">
-                <img class="img-logo" th:src="@{~/images/logo.png}" alt="">
-            </a>
-            <div class="toolbar">
 
-                <a href="#" class="logout">
-                    Log Out
-                </a>
-            </div>
-        </header>
-        <nav class="admin__nav">
+    <body style="margin: 0px">
+        <header th:replace="fragment/adminHeader.html :: adminHeader"></header>
 
-
-            <ul class="menu">
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Dashboard</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Novel List</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Customer list</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Profile</a>
-                </li>
-<!--                <li class="menu__item">-->
-<!--                    <a class="menu__link" href="#"></a>-->
-<!--                </li>-->
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Settings</a>
-                </li>
-            </ul>
-        </nav>
-        <main class="admin__main">
-
-            <div class="add_btn">
-                <button class="btn btn--primary">Add New Smth</button>
+        <main class="admin_main">
+            <div class="admin__sidebar">
+                <div th:replace="fragment/adminNav_frag.html :: adminNav"></div>
             </div>
 
-
-            <h2>Dashboard</h2>
-            <div class="dashboard">
-                <div class="dashboard__item">
-                    <div class="card">
-                        <strong>Total cust</strong> Info of smth
-                    </div>
-                </div>
-                <div class="dashboard__item">
-                    <div class="card">
-                        <strong> View list</strong> Same here
-                    </div>
-                </div>
-                <div class="dashboard__item dashboard__item--full">
-                    <div class="card">
-                        <img src="#" alt="img or graph" />
-                    </div>
-                </div>
-                <div class="dashboard__item dashboard__item--col">
-                    <div class="card"> Item column</div>
-                </div>
+            <div class="admin__main-content">
+                    <h1>Welcome to the Admin Dashboard!</h1>
+                    <p>This is the main area where you can manage your website's content and settings.</p>
 
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Adipisci, aperiam architecto asperiores consequuntur culpa dolores eos error et eveniet
-                ex facere ipsa ipsum laboriosam laborum, non nostrum sit velit voluptatem?</p>
         </main>
-        <footer class="admin__footer">
-            <ul class="ticker">
-                <li class="ticker__item"><h2>Footer list</h2></li>
 
-            </ul>
-            <span>
+        <footer th:replace="fragment/adminFooter_frag.html :: adminFooter"></footer>
 
-    </span>
-        </footer>
-    </div>
     </body>
-</html>
+    </html>
