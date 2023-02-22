@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+      <title>Novel Page</title>
+
+
+    <link rel="stylesheet" th:href="@{~/css/footer.css}">
+    <link rel="stylesheet" th:href="@{~/css/header.css}">
+    <link rel="stylesheet" th:href="@{~/css/novelPage.css}">
+  </head>
+  <body>
+  <style>
+    .body{
+      height: 100vh;
+    }
+    main{
+      height: 100%;
+    }
+  </style>
+
+  <div th:replace="fragment/header_frag.html :: header"></div>
+
+  <div class="novel_main">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <div class="card">
+              <div class="card-body" th:each="novel:${novels}">
+                <h5 class="card-title" th:text="${novel.title}"></h5>
+                <h6>Author: </h6>><h6 class="card-subtitle mb-2 text-muted"  th:text="${novel.author}"></h6>
+                Genre: <p class="card-text"  th:text="${novel.genre}"> </p>
+<!--                <p class="card-text"  th:text="${novel.type}">Type: Chinese Webnovel</p>-->
+                Tag: <p class="card-text"  th:text="${novel.genre}"></p>
+                Status: <p class="card-text"  th:text="${novel.status}"></p>
+                Rating: <p class="card-text"  th:text="${novel.rating}"></p>
+                <div class="button-group">
+                  <a href="#" class="btn btn-secondary">Continue Reading</a>
+                  <a th:href="@{~/saveBookmark/}+${novel.id}" class="btn btn-primary"><i class="fas fa-bookmark"></i> Bookmark</a>
+<!--                  <a th:href="@{~/addBookmark/}+${novel.id}" class="btn btn-primary"><i class="fas fa-bookmark"></i> Bookmark</a>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <br>
+
+    <div class="container-fluid description">
+      <div class="row" th:each="novel:${novels}">
+        <div class="col-md-8 offset-md-2">
+          <h2>Description</h2>
+          <p th:text="${novel.description}"></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer th:replace="fragment/footer_frag.html :: footer"></footer>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>User Bookmark Page</title>
+        <link rel="stylesheet" th:href="@{~/css/footer.css}">
+        <link rel="stylesheet" th:href="@{~/css/header.css}">
+
+        <link rel="stylesheet" th:href="@{~/css/Bookmark.css}">
+
+    </head>
+    <body>
+
+    <main>
+        <div th:replace="fragment/header_frag.html :: header"></div>
+
+        <div class="bookmark-list" >
+            <div class="card" th:each="mark :${bookmarks}">
+                <a class="close-btn" th:href="@{~/deleteBookmark/}+${mark.id}">&times;</a>
+<!--                <img src="https://api.mtlnation.com/media/novel_covers/52790802b88e457cbbb87616762e6148.jpg" alt="Book cover">-->
+                <div class="card-info">
+                    <a class="card-title" th:href="@{~/novelSitePage/}+${mark.id}" th:text="${mark.title}"></a>
+                    <p class="card-description" th:text="${mark.description}"></p>
+                    status: <div class="card-meta" th:text="${mark.status}" > </div>
+                    rating:  <div class="card-rating" th:text="${mark.rating}"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <footer th:replace="fragment/footer_frag.html :: footer"></footer>
+
+
+    </body>
+</html>
